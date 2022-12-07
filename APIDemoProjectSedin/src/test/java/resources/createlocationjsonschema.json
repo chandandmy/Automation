@@ -1,0 +1,66 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"$id": "https://example.com/object1670407788.json", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"status",
+		"place_id",
+		"scope",
+		"reference",
+		"id"
+	],
+	"properties": {
+		"status": {
+			"$id": "#root/status", 
+			"title": "Status", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"OK"
+			],
+			"pattern": "^.*$"
+		},
+		"place_id": {
+			"$id": "#root/place_id", 
+			"title": "Place_id", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"d391f7fb4c90cedaee0f271031c7aeb5"
+			],
+			"pattern": "^.*$"
+		},
+		"scope": {
+			"$id": "#root/scope", 
+			"title": "Scope", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"APP"
+			],
+			"pattern": "^.*$"
+		},
+		"reference": {
+			"$id": "#root/reference", 
+			"title": "Reference", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"6eb20bef9216938020a400244768658a6eb20bef9216938020a400244768658a"
+			],
+			"pattern": "^.*$"
+		},
+		"id": {
+			"$id": "#root/id", 
+			"title": "Id", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"6eb20bef9216938020a400244768658a"
+			],
+			"pattern": "^.*$"
+		}
+	}
+}

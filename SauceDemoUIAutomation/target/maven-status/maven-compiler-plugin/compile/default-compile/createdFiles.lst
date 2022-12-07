@@ -1,0 +1,6 @@
+sauceDemo\Base\BaseClass.class
+sauceDemo\pageObjects\CheckOutPage.class
+sauceDemo\pageObjects\LoginPage.class
+utilities\CommonUtils.class
+sauceDemo\pageObjects\ProductsPage.class
+sauceDemo\Base\DriverInit.class
