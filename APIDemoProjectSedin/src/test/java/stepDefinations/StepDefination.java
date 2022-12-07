@@ -2,6 +2,7 @@ package stepDefinations;
 
 import static io.restassured.RestAssured.given;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import static org.junit.Assert.*;
@@ -37,10 +38,10 @@ public void user_calls_with_http_request(String resource, String method) throws 
 		APIResources resourceAPI=APIResources.valueOf(resource);
 		System.out.println(resourceAPI.getResource());	
 		
-		//InputStream createlocationjsonschema = getClass ().getClassLoader ()
-			  //  .getResourceAsStream ("createlocationjsonschema.json");
-		//responseSpec =new ResponseSpecBuilder().expectBody(JsonSchemaValidator.matchesJsonSchema(createlocationjsonschema)).expectStatusCode(200).expectContentType(ContentType.JSON).build();
-		responseSpec =new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
+		String localDir = System.getProperty("user.dir");
+		File file = new File(localDir + getGlobalValue("jsonSchema_File"));
+		responseSpec =new ResponseSpecBuilder().expectBody(JsonSchemaValidator.matchesJsonSchema(file)).expectStatusCode(200).expectContentType(ContentType.JSON).build();
+		//responseSpec =new ResponseSpecBuilder().expectStatusCode(200).expectContentType(ContentType.JSON).build();
 
 		if(method.equalsIgnoreCase("POST"))
 		 response =requestSpec.when().post(resourceAPI.getResource());
